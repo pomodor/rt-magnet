@@ -13,8 +13,6 @@ end
 query = "select name, concat('#{MAGNET_PREFIX}', magnet) as link from torrents where name like '%" +
   ARGV.join("%' and name like '%") + "%'"
 
-puts query
-
 begin
   db = Mysql2::Client.new YAML.load(File.open '../config/database.yml', 'r')
   result = db.query(query)
