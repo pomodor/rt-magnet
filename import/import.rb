@@ -11,7 +11,7 @@ else
   exit false
 end
 
-db = Mysql2::Client.new YAML.load(File.open 'database.yml', 'r')
+db = Mysql2::Client.new YAML.load(File.open '../config/database.yml', 'r')
 
 puts 'Импортируем из директории ' + csv_import_dir + ' в базу данных ' +
   db.query_options[:database] + '@' + db.query_options[:host]
