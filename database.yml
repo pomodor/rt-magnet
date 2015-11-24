@@ -1,0 +1,5 @@
+database: magnet
+username: magnet
+password: magnet
+host: localhost
+encoding: utf8
