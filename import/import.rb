@@ -1,13 +1,13 @@
 #!/usr/bin/ruby
 
-require 'CSV'
+require 'csv'
 require 'yaml'
 require 'mysql2'
 
 if ARGV.length == 1
   csv_import_dir = ARGV[0]
 else
-  puts 'import.rb <директория с файлами csv>'
+  puts './import.rb <директория с файлами csv>'
   exit false
 end
 
