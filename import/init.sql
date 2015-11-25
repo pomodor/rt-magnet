@@ -7,5 +7,5 @@ use magnet;
 create table torrents(
     tid int primary key auto_increment,
     name varchar(256) not null,
-    magnet varchar(40) unique
+    magnet char(40) unique
 );
