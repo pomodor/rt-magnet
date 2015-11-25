@@ -10,8 +10,8 @@ if ARGV.length == 0
   exit false
 end
 
-query = "select name, concat('#{MAGNET_PREFIX}', magnet) as link from torrents where name like '%" +
-  ARGV.join("%' and name like '%") + "%'"
+query = "select name, concat('#{MAGNET_PREFIX}', magnet) as link from torrents " +
+  "where name like '%" + ARGV.join("%' and name like '%") + "%'"
 
 begin
   db = Mysql2::Client.new YAML.load(File.open '../config/database.yml', 'r')
@@ -24,5 +24,5 @@ end
 result.each do |row|
   puts row['name']
   puts row['link']
-  puts '=' * 80
+  puts
 end

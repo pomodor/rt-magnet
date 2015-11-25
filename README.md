@@ -13,4 +13,4 @@ mysql -u root -p < init.sql
 ```
 
 #### Поиск
-В директории search запустите файл ./magnet.rb key_1 key_2 ... key_n
+В директории search запустите файл ./magnet.rb key_1 key_2 ... key_n. Доступен и поиск через Apache Solr. Используйте файл solrs.rb.
